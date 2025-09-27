@@ -1,0 +1,386 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Header Section ===== */
+#header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.4)),
+              url("images/6246604782265550464.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid #ff004f;
+  box-shadow: 0 0 15px rgba(255,0,79,0.6);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover glow effect */
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #ff004f;
+  text-shadow: 0 0 10px #ff004f;
+}
+
+/* ===== Header Text ===== */
+.header-text {
+  margin-top: 12%;
+  text-align: center;
+}
+
+.header-text p {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+
+.header-text h3 {
+  font-size: 48px;
+  margin-top: 20px;
+  line-height: 1.3;
+}
+
+.header-text span {
+  color: #ff004f;
+  text-shadow: 0 0 20px #ff004f;
+}
+/* ===== About Me ===== */
+.about-col-1 img {
+  width: 180px;          /* smaller size */
+  height: 180px;         /* keep it square for perfect circle */
+  border-radius: 50%;    /* makes it circular */
+  border: 3px solid #ff004f;
+  box-shadow: 0 10px 30px rgba(255,0,79,0.5);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.about-col-1 img:hover {
+  transform: scale(1.1) rotate(2deg);  /* subtle hover animation */
+  box-shadow: 0 15px 40px rgba(255,0,79,0.7);
+}
+.about-col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ===== Education Section Styling ===== */
+#education {
+  padding: 80px 20px;
+  background: #111; /* Dark background for contrast */
+  color: #fff;
+  text-align: center;
+}
+
+#education .sub-title {
+  font-size: 3rem;
+  color: #00c6ff;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #00c6ff;
+}
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.education-list div {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,198,255,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.education-list div img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #00c6ff;
+}
+
+.education-list div h2 {
+  color: #00c6ff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #00c6ff;
+}
+
+.education-list div p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.education-list div:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,198,255,0.5);
+}
+/* ===== Skills Section ===== */
+#skills {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1f1f1f, #333);
+  color: #fff;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 3rem;
+  color: #ff004f;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff004f;
+}
+
+#skills h3 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#skills ul li {
+  background: #ff004f;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(255,0,79,0.4);
+  transition: transform 0.3s, background 0.3s;
+  cursor: default;
+}
+
+#skills ul li:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: #ff66a3;
+  box-shadow: 0 8px 20px rgba(255,0,79,0.6);
+}
+
+/* Different colors for tech vs soft skills */
+.tech-skills li {
+  background: #ff004f;
+}
+
+.soft-skills li {
+  background: #00c6ff;
+  box-shadow: 0 4px 15px rgba(0,198,255,0.4);
+}
+
+.soft-skills li:hover {
+  background: #66e0ff;
+  box-shadow: 0 8px 20px rgba(0,198,255,0.6);
+}
+
+
+/* ===== Projects Section ===== */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.projects-list div {
+  background: #262626;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.3s;
+  text-align: center;
+}
+
+.projects-list div img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.projects-list div h2 {
+  margin: 15px 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.projects-list div p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.projects-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+/* ===== Contact Section ===== */
+#contact {
+  padding: 80px 20px;
+  background: #111; /* Dark background for contrast */
+  color: #fff;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 3rem;
+  color: #ff004f;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff004f;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+#contact a {
+  color: #00c6ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#contact a:hover {
+  color: #ff66a3;
+  text-shadow: 0 0 10px #ff66a3;
+}
+
+/* ===== Contact Form Styling ===== */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact form input,
+#contact form textarea {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 2px solid #00c6ff;
+  border-radius: 10px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border-color: #ff004f;
+  box-shadow: 0 0 10px rgba(255,0,79,0.6);
+  outline: none;
+}
+
+#contact form button {
+  padding: 15px;
+  background: #ff004f;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact form button:hover {
+  background: #ff66a3;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,0,79,0.5);
+}
+
+/* ===== Footer Styling ===== */
+footer {
+  background: #080808;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+
+
+
+
